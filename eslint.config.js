@@ -18,4 +18,9 @@ export default [
       'eslint.config.js'
     ],
   },
+   {
+    rules: {
+      'canonical/filename-match-exported': 0,
+    }
+  },
 ];

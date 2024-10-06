@@ -1,5 +1,5 @@
 {
- "[css]": {
+  "[css]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[html]": {
@@ -35,6 +35,9 @@
   "[zmodel]": {
     "editor.defaultFormatter": "zenstack.zenstack"
   },
+  "cSpell.words": [
+    "archivo"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
@@ -58,4 +61,10 @@
       "mode": "auto"
     }
   ],
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "clsx\\(([^)]*)\\)",
+      "(?:'|\"|`)([^']*)(?:'|\"|`)"
+    ]
+  ]
 }
