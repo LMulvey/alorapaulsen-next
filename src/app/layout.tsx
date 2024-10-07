@@ -9,12 +9,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  sidebar,
 }: Readonly<{
   children: React.ReactNode;
+  sidebar: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="max-w-[1440px] mx-auto mt-10">
+        <main className="md:grid md:grid-cols-2 md:gap-4">
+          {sidebar}
+          <section>{children}</section>
+        </main>
+      </body>
     </html>
   );
 }

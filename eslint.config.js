@@ -21,6 +21,7 @@ export default [
    {
     rules: {
       'canonical/filename-match-exported': 0,
+      'react/forbid-component-props': 0,
     }
   },
 ];

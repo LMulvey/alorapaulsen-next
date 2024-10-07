@@ -34,8 +34,10 @@
 
 body {
   font-synthesis: none;
-  
-  background: rgb(255,215,102);
-  filter: contrast(170%) brightness(400%);
-  background: linear-gradient(90deg, rgba(255,215,102,1) 0%, rgba(255,255,255,1) 50%, rgba(221,106,180,1) 100%);
+  background: #FFFFFF;
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 1px;
 }
