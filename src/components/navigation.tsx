@@ -48,11 +48,11 @@ const isActiveRoute = (pathname: string, routeToTest: string) => {
 };
 
 const navClasses = clsx(
-  'w-full flex flex-row items-center gap-2 mb-4 border-b pl-6 border-b-lavender-100 text-md font-medium',
+  'flex flex-row items-center gap-2 mt-16 md:mt-0 mb-4 border-b md:pl-6 border-b-lavender-100 text-sm md:text-md font-medium',
   archivo.className,
 );
 const navItemVariants = cva(
-  'flex flex-row items-center justify-center no-underline gap-1 rounded-[8px_8px_0px_0px] px-8 py-2 transition-colors border border-lavender-100 border-b-0 hover:bg-bubblegum-400',
+  'w-full flex flex-row items-center justify-center no-underline gap-1 rounded-[8px_8px_0px_0px] px-2 md:px-8 py-2 transition-colors border border-lavender-100 border-b-0 hover:bg-bubblegum-400',
   {
     variants: {
       isActive: {

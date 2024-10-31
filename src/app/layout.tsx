@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="max-w-[1440px] mx-auto mt-10">
-        <main className="grid md:grid-cols-12 md:gap-8 p-10">
+        <main className="grid md:grid-cols-12 md:gap-8 p-3 md:p-10">
           <RootLayoutSidebar className="col-span-full md:col-span-4" />
           <section
             className={clsx('col-span-full md:col-span-7', archivo.className)}
