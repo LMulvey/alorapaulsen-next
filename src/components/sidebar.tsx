@@ -26,9 +26,18 @@ const SIDEBAR_ITEMS: SidebarItem[] = [
 
 const sidebarItemClasses = clsx('text-xl m-0 p-0 leading-0', archivo.className);
 
-export default function RootLayoutSidebar() {
+export default function RootLayoutSidebar({
+  className,
+}: {
+  className?: string;
+}) {
   return (
-    <nav className="w-full md:w-[375px] p-10 flex flex-col gap-4">
+    <nav
+      className={clsx(
+        'w-full md:w-[375px] px-10 flex flex-col gap-4',
+        className,
+      )}
+    >
       <Link
         className="flex flex-col gap-4 no-underline bg-white"
         href="/"
