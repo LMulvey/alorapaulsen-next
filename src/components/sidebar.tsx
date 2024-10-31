@@ -1,11 +1,14 @@
+import { LinkedinLogoIcon, XLogoIcon } from './icons';
 import { archivo, newsreader } from '@/lib/fonts';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import { type ReactNode } from 'react';
 
 type SidebarItem = {
   content: string;
   href?: string;
+  icon?: ReactNode;
   id: `separator-${number}` | string;
 };
 
@@ -20,11 +23,21 @@ const SIDEBAR_ITEMS: SidebarItem[] = [
   {
     content: 'LinkedIn',
     href: 'https://www.linkedin.com/in/alorapaulsen/',
+    icon: <LinkedinLogoIcon size={24} />,
     id: 'linkedin',
+  },
+  {
+    content: 'Twitter (X)',
+    href: 'https://x.com/alorapm',
+    icon: <XLogoIcon size={24} />,
+    id: 'twitter',
   },
 ];
 
-const sidebarItemClasses = clsx('text-xl m-0 p-0 leading-0', archivo.className);
+const sidebarItemClasses = clsx(
+  'text-xl m-0 p-0 leading-0 flex flex-row items-center gap-2',
+  archivo.className,
+);
 
 export default function RootLayoutSidebar({
   className,
@@ -68,6 +81,7 @@ export default function RootLayoutSidebar({
                 }
                 target={item.href.startsWith('http') ? '_blank' : undefined}
               >
+                {item.icon}
                 {item.content}
               </Link>
             );
