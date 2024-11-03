@@ -1,8 +1,9 @@
 import { ContentContainer } from '@/components/content-container';
 import { ExternalLink } from '@/components/external-link';
-import { type ReactNode } from 'react';
-
-type StudentReviewType = { authorAndCourse: string; quote: ReactNode };
+import {
+  StudentReview,
+  type StudentReviewType,
+} from '@/components/student-review';
 
 const STUDENT_REVIEWS: StudentReviewType[] = [
   {
@@ -71,16 +72,6 @@ const STUDENT_REVIEWS: StudentReviewType[] = [
     ),
   },
 ];
-
-const StudentReview = ({ authorAndCourse, quote }: StudentReviewType) => {
-  return (
-    <blockquote>
-      <p>
-        &ldquo;{quote}&rdquo; – <em>{authorAndCourse}</em>
-      </p>
-    </blockquote>
-  );
-};
 
 export default function TeachingPage() {
   return (
