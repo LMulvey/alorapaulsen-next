@@ -16,7 +16,7 @@ export default function CVPage() {
       <p className="flex flex-row items-center gap-2 pl-4">
         <ResumeIcon size={16} />
         <Link
-          aria-label={`Alora Paulsen Mulvey's CV as of ${LAST_UPDATED}`}
+          aria-label="View CV"
           href={`/downloads/${RESUME_FILEPATH}`}
           target="_blank"
         >

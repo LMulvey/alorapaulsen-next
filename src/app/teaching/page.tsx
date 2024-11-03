@@ -258,7 +258,7 @@ export default function TeachingPage() {
           K., Navarro, K., & Valle-Ruiz, L. (2015). The importance of community.
           Retrieved from{' '}
           <ExternalLink
-            ariaLabel="Reference link for 'The important of community'"
+            ariaLabel="Link to https://my.vanderbilt.edu/femped/habits-of-heart/community/"
             href="https://my.vanderbilt.edu/femped/habits-of-heart/community/"
           >
             https://my.vanderbilt.edu/femped/habits-of-heart/community/

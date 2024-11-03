@@ -35,7 +35,7 @@ const SIDEBAR_ITEMS: SidebarItem[] = [
 ];
 
 const sidebarItemClasses = clsx(
-  'text-xl m-0 p-0 leading-0 flex flex-row items-center gap-2',
+  'text-md lg:text-xl m-0 p-0 leading-0 flex flex-row items-center gap-2',
   archivo.className,
 );
 
@@ -66,7 +66,7 @@ export default function RootLayoutSidebar({
           Internet Researcher
         </h1>
       </Link>
-      <div className="flex flex-col gap-3 mt-12">
+      <div className="flex flex-row flex-wrap lg:flex-col gap-3 lg:mt-12">
         {SIDEBAR_ITEMS.map((item) => {
           if (item.href) {
             return (
