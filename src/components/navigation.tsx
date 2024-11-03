@@ -6,7 +6,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Fragment } from 'react';
 
-type RouteName = 'contact' | 'cv' | 'home' | 'publications' | 'teaching';
+type RouteName =
+  | '_not-found'
+  | 'contact'
+  | 'cv'
+  | 'home'
+  | 'publications'
+  | 'teaching';
 type Route = {
   href: string;
   id: RouteName;
@@ -26,7 +32,14 @@ const NAV_ROUTES: Route[] = [
 ];
 
 const isValidRoute = (value: string): value is RouteName => {
-  return ['contact', 'cv', 'home', 'publications', 'teaching'].includes(value);
+  return [
+    '_not-found',
+    'contact',
+    'cv',
+    'home',
+    'publications',
+    'teaching',
+  ].includes(value);
 };
 
 const parsePathnameAsRoute = (pathname: string): RouteName => {
@@ -36,7 +49,7 @@ const parsePathnameAsRoute = (pathname: string): RouteName => {
 
   const maybeRouteName = pathname.slice(1).split('/').join('-');
   if (!isValidRoute(maybeRouteName)) {
-    throw new Error('Unexpected or unsupported route.');
+    throw new Error(`Unexpected or unsupported route - ${maybeRouteName}`);
   }
 
   return maybeRouteName;
