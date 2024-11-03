@@ -14,7 +14,9 @@ export const ContentContainer = ({
   title,
 }: ContentContainerProps) => {
   return (
-    <div className={clsx('prose prose-lg mt-12 mb-20', className)}>
+    <div
+      className={clsx('prose prose-lg mt-12 mb-20 overflow-y-auto', className)}
+    >
       <HeadingOne>{title}</HeadingOne>
       {children}
     </div>

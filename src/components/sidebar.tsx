@@ -47,7 +47,7 @@ export default function RootLayoutSidebar({
   return (
     <nav
       className={clsx(
-        'w-full md:w-[375px] px-10 flex flex-col gap-4 lg:sticky top-0',
+        'w-full md:w-[375px] px-10 flex flex-col gap-4 h-min lg:sticky top-10',
         className,
       )}
     >
