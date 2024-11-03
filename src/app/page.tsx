@@ -18,12 +18,10 @@ export default function Home() {
       <p>
         My doctoral research investigates the relationship between the attention
         economy, care and community, and mom influencers. My four-year study,
-        <em>
-          &ldquo;#Momfluencers: Community, Care, and Resistance in the Social
-          Media Entertainment Industry&rdquo;
-        </em>{' '}
-        argues the cultural figure of the momfluencer shapes contemporary ideas
-        about the family, motherhood, femininity, and celebrity.
+        &ldquo;#Momfluencers: Community, Care, and Resistance in the Social
+        Media Entertainment Industry&rdquo; argues the cultural figure of the
+        momfluencer shapes contemporary ideas about the family, motherhood,
+        femininity, and celebrity.
       </p>
       <p>
         My collaborative research on the attention economy, feminized media

@@ -11,11 +11,9 @@ type Publication = {
   year: string;
 };
 
-// ... existing type definition ...
-
 const PUBLICATIONS: Publication[] = [
   {
-    authors: ['Paulsen Mulvey, Alora ', 'Keller, Jessalynn'],
+    authors: ['Paulsen Mulvey, Alora', 'Jessalynn Keller'],
     href: 'https://doi.org/10.1177/20563051231205594',
     id: 'paulsen-mulvey-keller-2023',
     publicationContext: '9(4)',
@@ -27,9 +25,9 @@ const PUBLICATIONS: Publication[] = [
   {
     authors: [
       'Thomas, Andrew',
-      'Paulsen Mulvey, Alora',
-      'Cramer, Dana',
-      'Zanco, Amanda',
+      'Alora Paulsen Mulvey',
+      'Dana Cramer',
+      'Amanda Zanco',
     ],
     href: 'https://doi.org/10.21810/strm.v13i1.301',
     id: 'thomas-et-al-2021',
@@ -40,7 +38,7 @@ const PUBLICATIONS: Publication[] = [
     year: '2021',
   },
   {
-    authors: ['Keller, Jessalynn', 'Paulsen Mulvey, Alora'],
+    authors: ['Keller, Jessalynn', 'Alora Paulsen Mulvey'],
     href: 'https://theconversation.com/this-halloween-witches-are-casting-spells-to-defeat-trump-and-witchthevote-in-the-u-s-election-148213',
     id: 'keller-paulsen-mulvey-2020',
     publicationContext: 'October 29, 2020',
@@ -60,6 +58,22 @@ const PUBLICATIONS: Publication[] = [
     year: '2019',
   },
 ];
+
+const resolveAnd = (authorNumber: number, totalAuthors: number) => {
+  if (totalAuthors === 1) {
+    return '';
+  }
+
+  if (authorNumber + 1 === totalAuthors - 1) {
+    return ', and ';
+  }
+
+  if (authorNumber + 1 === totalAuthors) {
+    return '';
+  }
+
+  return ', ';
+};
 
 export default function PublicationsPage() {
   return (
@@ -85,15 +99,17 @@ export default function PublicationsPage() {
               key={id}
             >
               <p className="m-0">
-                {authors.join(', ')}. {year}. &ldquo;{title}.&rdquo;{' '}
-                <em>{publicationName}</em>, {publicationContext}.{' '}
+                {authors.map(
+                  (author, index) =>
+                    `${author}${resolveAnd(index, authors.length)}`,
+                )}
+                . {year}. &ldquo;{title}.&rdquo; <em>{publicationName}</em>,{' '}
+                {publicationContext}.{' '}
                 <ExternalLink
                   ariaLabel={`A link to the ${title} publication`}
                   href={href}
                 >
-                  <em className="line-clamp-1 max-w-[125px] overflow-ellipsis">
-                    {href}
-                  </em>
+                  <em>Link</em>
                 </ExternalLink>
               </p>
             </div>

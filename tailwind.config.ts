@@ -35,6 +35,14 @@ const config: Config = {
         mono: ['var(--font-geist-mono)'],
         sans: ['var(--font-geist-sans)'],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            'blockquote p:first-of-type::after': false,
+            'blockquote p:first-of-type::before': false,
+          },
+        },
+      },
     },
   },
 };
