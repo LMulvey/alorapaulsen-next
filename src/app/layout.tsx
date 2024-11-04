@@ -52,11 +52,20 @@ export default function RootLayout({
             Copyright &copy; {new Date().getFullYear()} Alora Paulsen Mulvey
           </p>
           <p>Content by Alora Paulsen Mulvey</p>
-          <p>Branding by Mikaël Neves</p>
+          <p>
+            Branding by{' '}
+            <ExternalLink
+              ariaLabel="https://www.linkedin.com/in/mikaelneves/"
+              hideLinkIcon
+              href="https://www.linkedin.com/in/mikaelneves/"
+            >
+              Mikaël Neves
+            </ExternalLink>
+          </p>
           <p>
             Built by{' '}
             <ExternalLink
-              ariaLabel="Lee's personal website"
+              ariaLabel="leemulvey.com - Lee's personal website"
               hideLinkIcon
               href="https://leemulvey.com"
             >
