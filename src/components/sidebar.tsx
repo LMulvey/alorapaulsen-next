@@ -1,4 +1,4 @@
-import { LinkedinLogoIcon, XLogoIcon } from './icons';
+import { LinkedinLogoIcon } from './icons';
 import { archivo, newsreader } from '@/lib/fonts';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -25,12 +25,6 @@ const SIDEBAR_ITEMS: SidebarItem[] = [
     href: 'https://www.linkedin.com/in/alorapaulsen/',
     icon: <LinkedinLogoIcon size={24} />,
     id: 'linkedin',
-  },
-  {
-    content: 'Twitter (X)',
-    href: 'https://x.com/alorapm',
-    icon: <XLogoIcon size={24} />,
-    id: 'twitter',
   },
 ];
 
