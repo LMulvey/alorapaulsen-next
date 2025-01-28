@@ -253,10 +253,9 @@ export default function TeachingPage() {
           className="text-xs italic"
           id="reference-1"
         >
-          [1](https://www.notion.so/Website-Content-e284490c88ad4bb8872aba0c3c808b70?pvs=21)
-          Bostow, R., Brewer, S., Chick, N., Galina, B., McGrath, A., Mendoza,
-          K., Navarro, K., & Valle-Ruiz, L. (2015). The importance of community.
-          Retrieved from{' '}
+          [1] Bostow, R., Brewer, S., Chick, N., Galina, B., McGrath, A.,
+          Mendoza, K., Navarro, K., & Valle-Ruiz, L. (2015). The importance of
+          community. Retrieved from{' '}
           <ExternalLink
             ariaLabel="Link to https://my.vanderbilt.edu/femped/habits-of-heart/community/"
             href="https://my.vanderbilt.edu/femped/habits-of-heart/community/"
