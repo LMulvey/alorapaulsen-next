@@ -3,7 +3,7 @@ import { ResumeIcon } from '@/components/icons';
 import Link from 'next/link';
 
 const RESUME_FILEPATH = 'A Paulsen Mulvey - Curriculum Vitae (Web).pdf';
-const LAST_UPDATED = 'November 2024';
+const LAST_UPDATED = 'February 2025';
 
 export default function CVPage() {
   return (
