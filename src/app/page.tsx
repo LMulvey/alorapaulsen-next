@@ -1,5 +1,6 @@
 import { ContentContainer } from '@/components/content-container';
 import { ExternalLink } from '@/components/external-link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -41,6 +42,18 @@ export default function Home() {
         </ExternalLink>
         .
       </p>
+      <p className="pt-10 mt-10 border-t border-t-lavender-100/70">
+        In February 2025, I was honoured with the 2024 Graduate Student Teaching
+        Award at the University of Calgary. This institution-wide award
+        recognizes excellence in teaching and learning.
+      </p>
+      <div className="w-full relative aspect-[16/9] rounded-lg overflow-visible">
+        <Image
+          alt="Recipient of the 2024 Graduate Assistants Teaching Award at University of Calgary"
+          fill
+          src="/images/alora-teaching-award-2025.png"
+        />
+      </div>
     </ContentContainer>
   );
 }

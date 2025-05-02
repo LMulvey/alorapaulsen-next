@@ -8,9 +8,8 @@ export const StudentReview = ({
 }: StudentReviewType) => {
   return (
     <blockquote>
-      <p>
-        &ldquo;{quote}&rdquo; – <em>{authorAndCourse}</em>
-      </p>
+      <p className="mb-2">&ldquo;{quote}&rdquo;</p>
+      <em className="ml-2">&mdash; {authorAndCourse}</em>
     </blockquote>
   );
 };

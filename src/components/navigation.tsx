@@ -11,7 +11,7 @@ type RouteName =
   | 'contact'
   | 'cv'
   | 'home'
-  | 'publications'
+  | 'media'
   | 'teaching';
 type Route = {
   href: string;
@@ -26,7 +26,7 @@ type Route = {
  */
 const NAV_ROUTES: Route[] = [
   { href: '/cv', id: 'cv', label: 'CV' },
-  { href: '/publications', id: 'publications', label: 'Publications' },
+  { href: '/media', id: 'media', label: 'Media' },
   { href: '/teaching', id: 'teaching', label: 'Teaching' },
   { href: '/contact', id: 'contact', label: 'Contact' },
 ];
@@ -37,6 +37,7 @@ const isValidRoute = (value: string): value is RouteName => {
     'contact',
     'cv',
     'home',
+    'media',
     'publications',
     'teaching',
   ].includes(value);
@@ -61,7 +62,7 @@ const isActiveRoute = (pathname: string, routeToTest: string) => {
 };
 
 const navClasses = clsx(
-  'flex flex-row items-center gap-2 mt-16 lg:mt-0 mb-4 border-b lg:pl-6 border-b-lavender-100 text-sm lg:text-lg font-medium',
+  'flex flex-row items-center gap-2 mt-16 lg:mt-0 mb-4 border-b lg:pl-6 border-b-lavender-100 text-sm lg:text-lg font-medium bg-white sticky top-0 pt-4 md:pt-0 md:static',
   archivo.className,
 );
 const navItemVariants = cva(
