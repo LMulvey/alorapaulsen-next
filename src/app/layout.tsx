@@ -63,6 +63,16 @@ export default function RootLayout({
             </ExternalLink>
           </p>
           <p>
+            Photos by{' '}
+            <ExternalLink
+              ariaLabel="Elyse Bouvier for University of Calgary"
+              hideLinkIcon
+              href="https://elysebouvier.com/about"
+            >
+              Elyse Bouvier
+            </ExternalLink>
+          </p>
+          <p>
             Built by{' '}
             <ExternalLink
               ariaLabel="leemulvey.com - Lee's personal website"
