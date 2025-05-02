@@ -1,4 +1,4 @@
-import { MEDIA_APPEARANCES, PUBLICATIONS } from './data';
+import { MEDIA_APPEARANCES, PRESENTATIONS, PUBLICATIONS } from './data';
 import { ContentContainer } from '@/components/content-container';
 import { ExternalLink } from '@/components/external-link';
 
@@ -18,9 +18,46 @@ const resolveAnd = (authorNumber: number, totalAuthors: number) => {
   return ', ';
 };
 
-export default function PublicationsPage() {
+export default function ResearchPage() {
   return (
-    <ContentContainer title="Media">
+    <ContentContainer title="Research">
+      <h2
+        className="mt-20 mb-0"
+        id="presentations"
+      >
+        Presentations & Conference Appearances
+      </h2>
+      <ul className="flex flex-col gap-8">
+        {PRESENTATIONS.map(({ date, description, links, title }) => (
+          <li
+            className="border-b pb-4"
+            key={title}
+          >
+            <h3 className="font-bold">{title}</h3>
+            <p className="text-sm text-gray-600">
+              {date.toLocaleDateString('en-US', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+              })}
+            </p>
+            <p>{description}</p>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {links.map(({ href, title: linkTitle }) => (
+                <ExternalLink
+                  ariaLabel={`Open ${linkTitle} in a new tab`}
+                  className="text-blue-500 underline"
+                  href={href}
+                  key={href}
+                >
+                  {linkTitle}
+                </ExternalLink>
+              ))}
+            </div>
+          </li>
+        ))}
+      </ul>
+
       <h2
         className="mt-20 mb-0"
         id="media-appearances"

@@ -11,7 +11,7 @@ type RouteName =
   | 'contact'
   | 'cv'
   | 'home'
-  | 'media'
+  | 'research'
   | 'teaching';
 type Route = {
   href: string;
@@ -26,7 +26,7 @@ type Route = {
  */
 const NAV_ROUTES: Route[] = [
   { href: '/cv', id: 'cv', label: 'CV' },
-  { href: '/media', id: 'media', label: 'Media' },
+  { href: '/research', id: 'research', label: 'Research' },
   { href: '/teaching', id: 'teaching', label: 'Teaching' },
   { href: '/contact', id: 'contact', label: 'Contact' },
 ];
@@ -37,8 +37,8 @@ const isValidRoute = (value: string): value is RouteName => {
     'contact',
     'cv',
     'home',
-    'media',
     'publications',
+    'research',
     'teaching',
   ].includes(value);
 };

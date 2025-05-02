@@ -72,3 +72,35 @@ export const MEDIA_APPEARANCES: MediaAppearance[] = [
     url: '/downloads/Alora - Morning with Stacey Brotzel (April 4 2025).mp3',
   },
 ];
+
+type PresentationLink = {
+  href: string;
+  title: string;
+};
+
+type Presentation = {
+  date: Date;
+  description: string;
+  links: PresentationLink[];
+  title: string;
+};
+
+export const PRESENTATIONS: Presentation[] = [
+  {
+    date: new Date('2025-04-05 11:00:00'),
+    description:
+      'Ideologies of caring and the algorithm. What happens when contemporary ideas about care collide with the attention economy? Presentation for SCMS 2025 in Chicago, presented remotely.',
+    links: [
+      {
+        href: 'https://www.canva.com/design/DAGjVeMsR24/iGgNdEYd4mDrS91tCgOHQg/view',
+        title: 'Canva Presentation',
+      },
+      {
+        href: 'https://drive.google.com/drive/folders/131fmiH_5moH6ZI44aPgKU5PO2GVvqfkf?usp=sharing',
+        title: 'Google Drive',
+      },
+    ],
+    title:
+      'SCMS 2025 – The platform as a social safety net: care(lessness) and the attention economy',
+  },
+];
