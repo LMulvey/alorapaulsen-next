@@ -27,12 +27,12 @@ export default function PublicationsPage() {
       >
         Media appearances
       </h2>
-      <div className="flex flex-col gap-4 ml-8">
+      <div className="flex flex-col gap-4">
         {MEDIA_APPEARANCES.map(({ date, description, title, url }) => {
           const isAudio = url.endsWith('.mp3') || url.endsWith('.wav');
           return (
             <div
-              className="border-b pb-4"
+              className="border-b pb-4 pl-8"
               key={title}
             >
               <h3 className="font-bold">{title}</h3>
@@ -58,7 +58,6 @@ export default function PublicationsPage() {
               ) : (
                 <ExternalLink
                   ariaLabel={`Open ${title} in a new tab`}
-                  className="text-blue-500 underline"
                   href={url}
                 >
                   Open Appearance
