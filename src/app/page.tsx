@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <ContentContainer title="Welcome!">
       <p>
-        <span role="img">👋🏼</span> I'm Alora and I&apos;m a feminist media
-        studies researcher and doctoral candidate at the{' '}
+        <span role="img">👋🏼</span> I'm Dr. Alora Paulsen Mulvey and I&apos;m a
+        feminist media studies researcher and instructor of record at the{' '}
         <ExternalLink
           ariaLabel="A link to University of Calgary's website"
           href="https://ucalgary.ca/"
