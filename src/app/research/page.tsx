@@ -1,6 +1,7 @@
 import { MEDIA_APPEARANCES, PRESENTATIONS, PUBLICATIONS } from './data';
 import { ContentContainer } from '@/components/content-container';
 import { ExternalLink } from '@/components/external-link';
+import { type ReactNode } from 'react';
 
 const resolveAnd = (authorNumber: number, totalAuthors: number) => {
   if (totalAuthors === 1) {
@@ -18,6 +19,33 @@ const resolveAnd = (authorNumber: number, totalAuthors: number) => {
   return ', ';
 };
 
+const ResearchEntry = ({
+  children,
+  date,
+  description,
+  title,
+}: {
+  children: ReactNode;
+  date: Date;
+  description: string;
+  title: string;
+}) => {
+  return (
+    <div className="border-b pb-4 pl-8">
+      <h3 className="font-bold">{title}</h3>
+      <p className="text-sm text-gray-600">
+        {date.toLocaleDateString('en-US', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        })}
+      </p>
+      <p>{description}</p>
+      {children}
+    </div>
+  );
+};
+
 export default function ResearchPage() {
   return (
     <ContentContainer title="Research">
@@ -27,21 +55,14 @@ export default function ResearchPage() {
       >
         Presentations & Conference Appearances
       </h2>
-      <ul className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4">
         {PRESENTATIONS.map(({ date, description, links, title }) => (
-          <li
-            className="border-b pb-4"
-            key={title}
+          <ResearchEntry
+            date={date}
+            description={description}
+            key={`presentation-${title}`}
+            title={title}
           >
-            <h3 className="font-bold">{title}</h3>
-            <p className="text-sm text-gray-600">
-              {date.toLocaleDateString('en-US', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-              })}
-            </p>
-            <p>{description}</p>
             <div className="flex flex-wrap gap-2 mt-2">
               {links.map(({ href, title: linkTitle }) => (
                 <ExternalLink
@@ -54,9 +75,9 @@ export default function ResearchPage() {
                 </ExternalLink>
               ))}
             </div>
-          </li>
+          </ResearchEntry>
         ))}
-      </ul>
+      </div>
 
       <h2
         className="mt-20 mb-0"
@@ -68,19 +89,12 @@ export default function ResearchPage() {
         {MEDIA_APPEARANCES.map(({ date, description, title, url }) => {
           const isAudio = url.endsWith('.mp3') || url.endsWith('.wav');
           return (
-            <div
-              className="border-b pb-4 pl-8"
-              key={title}
+            <ResearchEntry
+              date={date}
+              description={description}
+              key={`presentation-${title}`}
+              title={title}
             >
-              <h3 className="font-bold">{title}</h3>
-              <p className="text-sm text-gray-600">
-                {date.toLocaleDateString('en-US', {
-                  day: 'numeric',
-                  month: 'long',
-                  year: 'numeric',
-                })}
-              </p>
-              <p>{description}</p>
               {isAudio ? (
                 <audio
                   className="mt-2"
@@ -97,10 +111,10 @@ export default function ResearchPage() {
                   ariaLabel={`Open ${title} in a new tab`}
                   href={url}
                 >
-                  Open Appearance
+                  View appearance
                 </ExternalLink>
               )}
-            </div>
+            </ResearchEntry>
           );
         })}
       </div>

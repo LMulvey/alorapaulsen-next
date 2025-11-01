@@ -45,18 +45,18 @@ export default function RootLayoutSidebar({
         className,
       )}
     >
-      <div className="w-full relative aspect-[1/1] rounded-full">
-        <Image
-          alt="Alora Paulsen: Internet Researcher"
-          className="rounded-full"
-          fill
-          src="/images/alora-headshot.png"
-        />
-      </div>
       <Link
         className="flex flex-col gap-4 no-underline bg-white"
         href="/"
       >
+        <div className="w-full relative aspect-[1/1] rounded-full">
+          <Image
+            alt="Alora Paulsen: Internet Researcher"
+            className="rounded-full"
+            fill
+            src="/images/alora-headshot.png"
+          />
+        </div>
         <Image
           alt="Alora Paulsen: Internet Researcher"
           height={271}
