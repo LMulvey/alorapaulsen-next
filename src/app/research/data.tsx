@@ -87,6 +87,18 @@ type Presentation = {
 
 export const PRESENTATIONS: Presentation[] = [
   {
+    date: new Date('2026-03-04 15:30:00'),
+    description:
+      'Join experienced graduate students and junior faculty as they share strategies on how to curate teaching materials, articulate their philosophies on teaching and student learning, and present evidence of teaching effectiveness through a teaching dossier.',
+    links: [
+      {
+        href: 'https://www.youtube.com/watch?v=5OnKvhgZJq0',
+        title: 'YouTube',
+      },
+    ],
+    title: 'Level-up your teaching dossier',
+  },
+  {
     date: new Date('2025-04-05 11:00:00'),
     description:
       'Ideologies of caring and the algorithm. What happens when contemporary ideas about care collide with the attention economy? Presentation for SCMS 2025 in Chicago, presented remotely.',
