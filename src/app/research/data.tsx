@@ -65,6 +65,13 @@ type MediaAppearance = {
 
 export const MEDIA_APPEARANCES: MediaAppearance[] = [
   {
+    date: new Date('2026-09-25 07:35:00'),
+    description:
+      "Alora joins Sarah Crosbie on QR Mornings in Calgary to discuss Dolly Parton day – and Dolly's secret to her global appeal.",
+    title: 'QR Mornings with Sarah Crosbie',
+    url: '/downloads/Alora - QR Mornings with Sarah Crosbie (September 25 2026).mp3',
+  },
+  {
     date: new Date('2025-04-04 11:00:00'),
     description:
       'Appearance on the popular 880 CHED radio show to discuss deeper meanings behind a White Lotus clip going viral on TikTok.',
